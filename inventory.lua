@@ -36,7 +36,7 @@ inventory.draw = function(self)
             end
         end
     end
-    if self.selectedCell then
+    if self.selectedCell and self.selectedCell.cell and self.selectedCell.cell.item then
         local mx, my = love.mouse.getPosition()
         love.graphics.rectangle('line', mx, my, self.cellSize, self.cellSize)
         local textOffset = 5
